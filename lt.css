@@ -1,0 +1,72 @@
+*{
+    margin: 0; 
+}
+
+.grid_container { 
+    display: grid; 
+    background-color: aquamarine;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "navigation navigation navigation"
+    "aside content content"
+    "aside section section"
+    "footer footer footer"
+    ;
+    gap: 2%;
+    width: 100vw; 
+    height: 100vh; 
+
+    /*The text representation of what we want the web page to look like*/
+}
+
+.header { 
+background-color: teal;
+grid-area: header;
+display: flex; 
+justify-content: center;
+align-items: center; 
+}
+
+.navigation { 
+    background-color: green;
+    grid-area: navigation;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.aside { 
+    background-color: springgreen;
+    grid-area: aside;
+    flex-direction: column;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.content { 
+    background-color: lightskyblue;
+    grid-area: content;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.section { 
+    background-color: blue;
+    grid-area: section;
+    display: flex; 
+    justify-content: center;
+    align-items: center;    
+}
+
+.footer { 
+    background-color: teal;
+    grid-area: footer;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+

@@ -1,0 +1,76 @@
+/*Use grid for large site layouts. 
+Use flex to position things inside components. */
+
+*{
+    margin: 0; 
+}
+
+.grid_container { 
+    display: grid; 
+    background-color: cornflowerblue;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "ads content more_ads"
+    "ads content_2 more_ads"
+    "footer footer footer"
+    ;
+    width: 100vw; 
+    height: 100vh; 
+
+    /*The text representation of what we want the web page to look like*/
+}
+
+img {
+    height: 75px; 
+    width: 75px; 
+}
+
+.header, .ads, .content, .content_2, .more_ads, .footer {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.header { 
+    background-color: limegreen;
+    grid-area: header;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+.ads { 
+    background-color: red;
+    grid-area: ads; 
+}
+
+.content { 
+    background-color: yellow;
+    grid-area: content; 
+    flex-direction: column;
+    justify-content: end;
+}
+
+.content_2 { 
+    background-color: purple;
+    grid-area: content_2; 
+}
+
+.more_ads { 
+    background-color: pink;
+    grid-area: more_ads;
+}
+
+.footer { 
+    background-color: aqua;
+    grid-area: footer; 
+}
+
+.image_container { 
+    display: flex;
+    width: 100%; 
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
